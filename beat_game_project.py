@@ -18,22 +18,12 @@ letter = "a"
 ring_letter_x_offset = 25
 ring_letter_y_offset = 50
 
-
+ring1.penup()
 # -- Functions --
-def drawLetter(active_ring, letter):
-    drawer.penup()
-    drawer.goto(active_ring.xcor() - ring_letter_x_offset, active_ring.ycor() - ring_letter_y_offset)
-
-
-
 def drawRing(active_ring, letter):
-    active_ring.showturtle()
+    active_ring.goto(-300, 0)
     active_ring.shape(ringoffire_image)
-    drawLetter(active_ring, letter)
     wn.update()
-
-
-
 
 
 # pt 1 - Get the game functioning and playable
@@ -44,7 +34,7 @@ def drawRing(active_ring, letter):
 
 
 # --Function Call--
-drawRing(ring1, A)
+drawRing(ring1)
 
 wn.bgpic("background.gif")
 wn.mainloop()
